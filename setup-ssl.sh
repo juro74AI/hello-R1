@@ -11,6 +11,10 @@ openssl genrsa -out ssl/private.key 2048
 # Générer un certificat auto-signé
 openssl req -new -x509 -key ssl/private.key -out ssl/certificate.crt -days 365 -subj "/C=FR/ST=France/L=Paris/O=Dev/CN=magic.red-ark.com"
 
+echo "Certificats générés :"
+echo "- ssl/certificate.crt"
+echo "- ssl/private.key"
+echo ""
 echo "Certificats SSL générés dans le dossier ssl/"
 echo "ATTENTION: Ces certificats sont auto-signés et ne doivent être utilisés qu'en développement"
 echo ""
